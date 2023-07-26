@@ -7,7 +7,7 @@ const configuration = new Configuration({
     apiKey: process.env.API_KEY,
 })
 
-const openai = new OpenAIApi();
+const openai = new OpenAIApi(configuration);
 
 import express from 'express';
 import cors from 'cors';
@@ -29,4 +29,4 @@ app.post('/dream', async (req, res) => {
     res.send({ image });
 });
 
-app.listen(8080, () => console.log(process.env.API_KEY));
+app.listen(8080, () => console.log("We upp"));
