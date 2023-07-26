@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post('/dream', async (req, res) => {
+app.post('/generate', async (req, res) => {
     const prompt = req.body.prompt;
 
     const apiResponse = await openai.createImage({
